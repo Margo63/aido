@@ -1,0 +1,28 @@
+
+# Linear stretch of road. Basic test case.
+tiles:
+  - [straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E, straight/E, straight/E, straight/E, straight/E,
+     straight/E]
+
+objects:
+
+  - kind: trafficlight
+    pos: [5.0, 0.5]
+    rotate: 135
+    height: 0.4
+    optional: false
+
+  - kind: trafficlight
+    pos: [ 10.0, 0.5 ]
+    rotate: 135
+    height: 0.4
+    optional: false
+
+start_tile: [0, 0]
+tile_size: 0.585
