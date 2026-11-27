@@ -29,17 +29,17 @@ class TrafficlightTaskSolution(TaskSolution):
 
         dist = light.pos[0] - position_x
 
-        if dist > 1.1:
+        if dist > 1.2:
             return True
 
-        return light.pattern == 0
+        return light.pattern == 1
 
     def solve(self):
         env = self.generated_task['env']
 
         simulator = env.unwrapped
-        simulator.cur_pos = np.array([0.8, 0.0, 0.2925])
-        simulator.cur_angle = 0.0
+        # simulator.cur_pos = np.array([0.8, 0.0, 0.2925])
+        # simulator.cur_angle = 0.0
 
         angular_velocity = 0.0
 
@@ -59,18 +59,15 @@ class TrafficlightTaskSolution(TaskSolution):
             else:
                 linear_velocity = 0.0
 
-            obs, _, done, _ = env.step([linear_velocity, angular_velocity])
+            obs, _, _, _ = env.step([linear_velocity, angular_velocity])
             env.render()
 
-            if done:
-                break
 
-
-if __name__ == "__main__":
-    from gym_duckietown.tasks.default.task_generator import DefaultTaskGenerator
-
-    task_generator = DefaultTaskGenerator()
-    env = task_generator.generate_task(map_name='trafficmap.yaml')
-
-    solution = TrafficlightTaskSolution(task_generator.generated_task)
-    solution.solve()
+# if __name__ == "__main__":
+#     from gym_duckietown.tasks.default.task_generator import DefaultTaskGenerator
+#
+#     task_generator = DefaultTaskGenerator()
+#     env = task_generator.generate_task(map_name='trafficmap.yaml')
+#
+#     solution = TrafficlightTaskSolution(task_generator.generated_task)
+#     solution.solve()

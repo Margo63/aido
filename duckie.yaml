@@ -7,8 +7,9 @@ objects:
   pos: [3.0, 0.5]
   rotate: 90
   height: 0.08
-  static: True
-
+  static: False
+  linear_velocity: [ 0.5, 0.0, 0.0 ]
+  angular_velocity: [ 0.0, 0.0, 0.0 ]
 # Always start driving on the leftmost tile
 # The position and direction of the agent on the tile will be randomized
 start_tile: [0, 0]

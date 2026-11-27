@@ -5,8 +5,8 @@
 - [ ] 🔴 **lane_center**
 - [x] 🟢 **dont_crush_duckie**
 - [x] 🟢 **ride_3_m_duckiebot**
-- [ ] 🔴 **trafficlight**
-- [ ] 🔴 **dont_crush_pedestrian**
+- [x] 🟢 **trafficlight**
+- [x] 🟡 **dont_crush_pedestrian** принято но решение не полное (по методе там еще BFS)
 - [ ] 🔴 **roundtrip**
 - [x] 🔴 **lf_challenge_no_cv**
 - [x] 🔴 **lf_challenge**
